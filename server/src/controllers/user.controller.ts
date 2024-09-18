@@ -4,6 +4,8 @@ import { OK } from '../constants/http';
 
 const getAllUsers = catchAsyncErrors(
   async (req: Request, res: Response, next: NextFunction) => {
+    await new Promise((resolve) => setTimeout(resolve, 3000))
+
     res.status(OK).json({
       status: 'success',
       message: 'get all users',

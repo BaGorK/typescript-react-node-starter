@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animate-loading {
+  animation-name: blur;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+/* animation: blur 10s ease-in 3s infinite; */
+
+@keyframes blur {
+  0%,
+  100% {
+    color: #374151;
+  }
+  50% {
+    color: #9ca3af;
+  }
+}
